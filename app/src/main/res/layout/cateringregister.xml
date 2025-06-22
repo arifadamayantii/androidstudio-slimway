@@ -1,0 +1,120 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".RegisterActivity">
+
+    <ImageButton
+        android:id="@+id/buttonBack"
+        android:layout_width="48dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleCreateMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="16dp"
+        android:text="Register"
+        android:textColor="#007EA7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coinIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp"
+        android:text="🪙10"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/titleCreateMenu"
+        app:layout_constraintTop_toTopOf="@id/titleCreateMenu" />
+
+    <!-- Plan Buttons below image -->
+
+    <ImageView
+        android:id="@+id/titleImage"
+        android:layout_width="0dp"
+        android:layout_height="209dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Atur Menu Favoritmu"
+        android:src="@drawable/mitracreatemenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleCreateMenu" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/weeklyPlanButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Weekly Plan"
+        android:textColor="#0081C9"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="16dp"
+        app:iconGravity="textStart"
+        app:iconTint="#0081C9"
+        app:layout_constraintEnd_toStartOf="@id/monthlyPlanButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleImage" />
+
+    <!-- RecyclerView in between -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/monthlyPlanButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Monthly Plan"
+        android:textColor="#0081C9"
+        app:backgroundTint="#F6F4F6"
+        app:cornerRadius="16dp"
+        app:iconGravity="textStart"
+        app:iconTint="#0081C9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/weeklyPlanButton"
+        app:layout_constraintTop_toBottomOf="@id/titleImage" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewKatering"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/weeklyPlanButton"
+        app:layout_constraintBottom_toTopOf="@id/registerButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Register Button pinned to bottom -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#0081C9"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewKatering"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

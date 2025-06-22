@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <!-- Padding dalam card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- Gambar Menu (imageMenu) mirip gambarResep -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tuna"
+                android:contentDescription="Gambar Menu" />
+
+            <!-- Kalori kanan atas -->
+            <TextView
+                android:id="@+id/kalori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 Kalori"
+                android:textColor="#007EA7"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_alignTop="@id/imageMenu"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/rating_background"
+                android:padding="4dp" />
+        </RelativeLayout>
+
+
+        <!-- Informasi Menu -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/textMenuName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Menu"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/textDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deskripsi"
+                android:textSize="14sp"
+                android:textColor="#555555"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/textPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp32.000"
+                android:textSize="14sp"
+                android:textColor="#020100" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

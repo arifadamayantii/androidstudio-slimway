@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/imageRecipe"
+                            android:layout_width="0dp"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/tuna"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="Chicken Caesar Salad"
+                            android:textColor="#0099cc"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toStartOf="@id/rating"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/imageRecipe" />
+
+                        <TextView
+                            android:id="@+id/rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="★ 4.9"
+                            android:textColor="#FFB300"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/title" />
+
+                        <TextView
+                            android:id="@+id/desc"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Enjoy a fresh and flavorful take on the classic Caesar salad..."
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/title" />
+
+                        <!-- Nutrition Info (4 vertical LinearLayouts arranged horizontally) -->
+                        <LinearLayout
+                            android:id="@+id/nutrition_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/desc"
+                            app:layout_constraintBottom_toTopOf="@id/ingredientTitle">
+
+                                <!-- Protein -->
+                                <LinearLayout
+                                    android:id="@+id/nut1_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="8dp">
+
+                                        <TextView
+                                            android:id="@+id/nut1_label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Protein"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#000000" />
+
+                                        <TextView
+                                            android:id="@+id/nut1_value"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="33.8g"
+                                            android:textSize="14sp"
+                                            android:textColor="#555555" />
+                                </LinearLayout>
+
+                                <!-- Fat -->
+                                <LinearLayout
+                                    android:id="@+id/nut2_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="8dp">
+
+                                        <TextView
+                                            android:id="@+id/nut2_label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Fat"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#000000" />
+
+                                        <TextView
+                                            android:id="@+id/nut2_value"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="3.2g"
+                                            android:textSize="14sp"
+                                            android:textColor="#555555" />
+                                </LinearLayout>
+
+                                <!-- Carbs -->
+                                <LinearLayout
+                                    android:id="@+id/nut3_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="8dp">
+
+                                        <TextView
+                                            android:id="@+id/nut3_label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Carbs"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#000000" />
+
+                                        <TextView
+                                            android:id="@+id/nut3_value"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="17.6g"
+                                            android:textSize="14sp"
+                                            android:textColor="#555555" />
+                                </LinearLayout>
+
+                                <!-- Calories -->
+                                <LinearLayout
+                                    android:id="@+id/nut4_container"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="8dp">
+
+                                        <TextView
+                                            android:id="@+id/nut4_label"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Calories"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:textColor="#000000" />
+
+                                        <TextView
+                                            android:id="@+id/nut4_value"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="453"
+                                            android:textSize="14sp"
+                                            android:textColor="#555555" />
+                                </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/ingredientTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="Ingredients"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/nutrition_container" />
+
+                        <!-- Ingredients List -->
+                        <TextView
+                            android:id="@+id/bahan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Enjoy a fresh and flavorful take on the classic Caesar salad..."
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/ingredientTitle" />
+
+                        <TextView
+                            android:id="@+id/howToMake"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="24dp"
+                            android:text="How to Make"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/bahan" />
+
+                        <TextView
+                            android:id="@+id/step1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="1. Season the chicken breast with salt and pepper..."
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/howToMake" />
+
+                        <Button
+                            android:id="@+id/buttonBack"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Kembali"
+                            android:textColor="#FFFFFF"
+                            android:backgroundTint="#0099cc"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_margin="16dp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

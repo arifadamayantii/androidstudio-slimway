@@ -1,0 +1,249 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Icon Check -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_check_circle"
+            android:contentDescription="Order Confirmed"
+            android:layout_marginTop="32dp" />
+
+        <!-- Order Confirmed Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Confirmed!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#333333" />
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wed, 9 Apr 2025"
+            android:textSize="16sp"
+            android:textColor="#777777"
+            android:layout_marginTop="4dp" />
+
+
+        <!-- Transaction Details Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction Details"
+            android:textStyle="bold"
+            android:textColor="#888888"
+            android:textSize="16sp"
+            android:layout_marginTop="32dp" />
+
+        <!-- Detail Informasi Transaksi -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <!-- Nama -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Alamat -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alamat"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Telepon -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telepon"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvTelepon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Program Catering -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Catering Program"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvProgram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Start Date"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Waktu Delivery -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Delivery Time"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Metode Pembayaran -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvMetodePembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Bank -->
+            <LinearLayout
+                android:id="@+id/layoutBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bank"
+                    style="@style/DetailLabel" />
+                <TextView
+                    android:id="@+id/tvBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DetailValue" />
+            </LinearLayout>
+
+            <!-- Nomor Kartu -->
+            <LinearLayout
+                android:id="@+id/layoutCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nomor Kartu"
+                    style="@style/DetailLabel" />
+                <TextView
+                    android:id="@+id/tvCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/DetailValue" />
+            </LinearLayout>
+
+            <!-- Daftar Menu (dinamis) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Menu Details"
+                android:textStyle="bold"
+                android:textColor="#888888"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:id="@+id/layoutMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp" />
+
+            <!-- Total Harga -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Price"
+                style="@style/DetailLabel"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tvTotalHarga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Koin -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coin Redeem"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvKoin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue" />
+
+            <!-- Harga Akhir -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Final Price"
+                style="@style/DetailLabel" />
+            <TextView
+                android:id="@+id/tvHargaAkhir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/DetailValue"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!-- Tombol Kembali ke Beranda -->
+        <Button
+            android:id="@+id/btnKembali"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Home"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#039BE5"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+</ScrollView>

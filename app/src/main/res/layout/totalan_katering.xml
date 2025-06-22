@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Title -->
+
+        <!-- Delivery Address Label -->
+
+        <!-- Delivery Address Box -->
+        <TextView
+            android:id="@+id/delivery_address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Delivery Address"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_back" />
+
+        <TextView
+            android:id="@+id/delivery_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_address_box"
+            android:padding="12dp"
+            android:text="Wyndham Surabaya Hotel\nJl. Basuki Rahmat No.67-73, Embong Kaliasin, Kec. Genteng, Kota Surabaya, Jawa Timur 60271, Indonesia"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/delivery_address_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Order Summary -->
+        <TextView
+            android:id="@+id/order_summary_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Summary"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/delivery_address"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Order Summary Items -->
+        <LinearLayout
+            android:id="@+id/order_summary_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/order_summary_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:text="Program: Weekly Plan"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="Selected Menu:"
+                android:textSize="14sp" android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="• Tofu Stir Fry"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="• SavorLean Beef Plate"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="• Rice Bowl with Meat"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="Delivery Time: 12:00 PM – 1:00 PM (Daily)"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:text="Start Date: 14 April 2025"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+
+        <!-- Use Coins Option -->
+        <CheckBox
+            android:id="@+id/checkbox_use_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use Coins for a Discount of Rp2,000"
+            android:textColor="#DAA520"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/order_summary_details"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coins_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Your Remaining Coins: 100)"
+            android:textColor="#FF0000"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/checkbox_use_coins"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Total Section -->
+        <TextView
+            android:id="@+id/total_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/coins_remaining"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp306.000,00"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@id/total_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Proceed to Payment Button -->
+        <Button
+            android:id="@+id/btn_proceed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:textStyle="bold"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintTop_toBottomOf="@id/total_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Back Icon -->
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Back"
+            app:srcCompat="@drawable/ic_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp" />
+
+        <!-- Checkout Title di sebelah kanan ikon back -->
+        <ImageView
+            android:id="@+id/imageView23"
+            android:layout_width="145dp"
+            android:layout_height="19dp"
+            app:srcCompat="@drawable/checkout"
+            app:layout_constraintTop_toTopOf="@id/ic_back"
+            app:layout_constraintStart_toEndOf="@id/ic_back"
+            android:layout_marginStart="8dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

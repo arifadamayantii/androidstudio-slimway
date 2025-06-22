@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <!-- Padding dalam card -->
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="12dp"> <!-- Jarak isi dari pinggir card -->
+
+<!-- Gambar Resep -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/gambarResep"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tuna"
+        android:contentDescription="Gambar Resep" />
+
+    <!-- Kalori kanan atas -->
+    <TextView
+        android:id="@+id/kaloriResep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="120 Kalori"
+        android:textColor="#007EA7"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@id/gambarResep"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:background="@drawable/rating_background"
+        android:padding="4dp" />
+
+    <!-- Rating kiri atas -->
+    <TextView
+        android:id="@+id/ratingResep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="★ 4.7 (512)"
+        android:textSize="12sp"
+        android:textColor="#000000"
+        android:background="@drawable/rating_background"
+        android:padding="4dp"
+        android:layout_alignTop="@id/gambarResep"
+        android:layout_alignParentStart="true"
+        android:layout_margin="8dp" />
+</RelativeLayout>
+
+<!-- Informasi Resep -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="12dp">
+
+    <TextView
+        android:id="@+id/namaResep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Resep"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/kategoriResep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kategori"
+        android:textSize="14sp"
+        android:textColor="#555555" />
+</LinearLayout>
+</LinearLayout>
+    </androidx.cardview.widget.CardView>

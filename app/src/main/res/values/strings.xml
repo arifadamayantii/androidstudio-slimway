@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Login Form</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome!</string>
+    <string name="login_screen">Login Screen</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="create_account">Create Account</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="last_name">Last Name</string>
+    <string name="create_password">Create Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="select">Pilih Status</string>
+</resources>

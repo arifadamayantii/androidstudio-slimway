@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/rating_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#EFEFEF"/> <!-- Warna latar belakang kuning -->
+    <corners android:radius="8dp"/>  <!-- Sudut melengkung -->
+    <padding
+        android:left="8dp"
+        android:top="4dp"
+        android:right="8dp"
+        android:bottom="4dp"/> <!-- Padding di dalam shape -->
+</shape>
